@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.S. Garathi Lifters - Official Profile</title>
+    <style>
+        :root {
+            --primary: #003366; 
+            --accent: #FF8C00; 
+            --light: #f8f9fa;
+            --text: #333;
+        }
+
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0; padding: 0; background-color: #f0f0f0; color: var(--text);
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 12mm;
+            margin: 10px auto;
+            background: white;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header-info { text-align: right; }
+        .header-info h1 { margin: 0; color: var(--primary); font-size: 24pt; }
+        .header-info p { margin: 2px 0; color: var(--accent); font-weight: bold; }
+        .gstin { font-size: 10pt; color: #555; font-family: monospace; }
+
+        .contact-bar {
+            background: var(--primary); color: white;
+            display: grid; grid-template-columns: 1fr 1fr;
+            padding: 10px 15px; border-radius: 4px; margin-bottom: 20px; font-size: 9pt;
+        }
+
+        .main-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+
+        h2 { color: var(--primary); border-left: 4px solid var(--accent); padding-left: 10px; font-size: 16pt; margin: 15px 0 10px; }
+        p { line-height: 1.5; font-size: 10.5pt; text-align: justify; margin: 0 0 10px; }
+
+        .machinery-box {
+            background: var(--light); border: 1px solid #ddd; padding: 12px; border-radius: 6px;
+        }
+        .machinery-table { width: 100%; border-collapse: collapse; font-size: 10pt; }
+        .machinery-table th { text-align: left; color: var(--primary); padding-bottom: 5px; border-bottom: 2px solid var(--accent); }
+        .machinery-table td { padding: 6px 0; border-bottom: 1px solid #eee; }
+
+        .machine-img {
+            width: 100%; height: 200px; 
+            object-fit: cover; 
+            border-radius: 6px; margin-top: 10px;
+            border: 1px solid #ccc;
+            display: block;
+        }
+
+        /* Team Section Styling */
+        .team-section {
+            margin-top: 30px;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .team-img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 2px solid var(--primary);
+        }
+        .team-text {
+            text-align: center;
+            font-style: italic;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Quotation Section Styling */
+        .action-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3e6;
+            border: 1px dashed var(--accent);
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .pdf-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-size: 10pt;
+        }
+
+        .pdf-btn:hover { background: #002244; }
+
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid #eee; padding-top: 10px;
+            text-align: center; font-size: 9pt; color: #777;
+        }
+
+        .print-btn {
+            position: fixed; top: 20px; right: 20px;
+            padding: 10px 20px; background: var(--accent);
+            color: white; border: none; border-radius: 20px; cursor: pointer;
+            font-weight: bold; z-index: 100;
+        }
+
+        @media print {
+            .print-btn, .action-box { display: none; }
+            .page { margin: 0; box-shadow: none; border: none; width: 100%; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">Download Profile PDF</button>
+
+    <div class="page">
+        <header>
+            <img src="Logo.jpeg" alt="M.S. Garathi Logo" style="width: 140px; height: 80px; object-fit: contain;">
+            <div class="header-info">
+                <h1>M.S. Garathi Lifters</h1>
+                <p>Aerial Work Platform Rentals</p>
+                <span class="gstin">GSTIN: 08JZHPS2731F1Z2</span>
+            </div>
+        </header>
+
+        <div class="contact-bar">
+            <div><strong>Add:</strong> S/O Hari Ram, Sabalgarh-Mundawar, Khairthal-Tijara(Raj.) - 301404</div>
+            <div style="text-align: right;">
+                <strong>Contact:</strong> 7073747448, 7300093754<br>
+                <strong>Email:</strong> msgarathilifters7073@gmail.com
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <div>
+                <h2>About Us</h2>
+                <p>Founded in 2019, M.S. Garathi Lifters is a leading firm providing heavy machinery on rent nationwide. We specialize in safe and high-quality aerial work platforms, offering 24/7 support to meet your project needs.</p>
+                
+                <h2>Available Machinery</h2>
+                <div class="machinery-box">
+                    <table class="machinery-table">
+                        <thead>
+                            <tr><th>Product Category</th><th>Specifications</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Boom Lifts</strong></td><td>600 SJ, 660 SJ, 800 AJ, 860 SJ, 1200 SJP </td></tr>
+                            <tr><td><strong>Height Range</strong></td><td>45 ft. to 150 ft. </td></tr>
+                            <tr><td><strong>Scissor Lifts</strong></td><td>9 mtr. to 18 mtr. </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h2>Visual Inventory</h2>
+                <img src="600AJ.jpg" class="machine-img" alt="Boom Lift 600AJ"> 
+                
+                <div class="action-box">
+                    <p style="text-align: center; font-weight: bold; margin-bottom: 10px; color: var(--primary);">Commercial Proposals</p>
+                    <a href="MSGLQuotation.pdf" target="_blank" class="pdf-btn">
+                        📄 View Detailed Quotation
+                    </a>
+                    <p style="font-size: 8pt; margin-top: 8px; color: #666;">Monthly Rent: 1,05,000/- (66ft Boomlift) </p>
+                </div>
+            </div> 
+        </div>
+
+        <div class="team-section">
+            <h2>Our Professionals</h2>
+            <img src="Team.jpeg" class="team-img" alt="M.S. Garathi Team">
+            <p class="team-text">"Meet our highly professional, enthusiastic, and skilled team that prioritizes safety and excellence in every project."</p>
+        </div>
+
+        <footer>
+            M.S. Garathi Lifters - Quality Service Since 2019
+        </footer>
+    </div>
+</body>
+</html>
