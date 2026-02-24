@@ -55,20 +55,19 @@
         h2 { color: var(--primary); border-left: 4px solid var(--accent); padding-left: 10px; font-size: 16pt; margin: 15px 0 10px; }
         p { line-height: 1.5; font-size: 10.5pt; text-align: justify; margin: 0 0 10px; }
 
-        /* Machinery Section Updated for Presentation */
-        .presentation-container {
+        /* Video Display Container */
+        .video-container {
             width: 100%;
-            height: 350px;
             background: #000;
             border-radius: 6px;
             overflow: hidden;
             border: 2px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .presentation-container iframe {
+        .video-container video {
             width: 100%;
-            height: 100%;
-            border: none;
+            display: block;
         }
 
         .machine-img {
@@ -80,8 +79,11 @@
         }
 
         .team-section {
-            margin-top: 25px; padding: 15px;
-            background: var(--light); border-radius: 8px; border: 1px solid #eee;
+            margin-top: 25px;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 8px;
+            border: 1px solid #eee;
         }
         .team-img {
             width: 100%; height: auto; max-height: 300px;
@@ -89,7 +91,9 @@
             margin-bottom: 15px; border: 2px solid var(--primary);
         }
 
-        .btn-container { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
+        .btn-container {
+            display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 15px;
+        }
         .action-btn {
             flex: 1; min-width: 110px; padding: 12px;
             text-decoration: none; border-radius: 5px;
@@ -122,7 +126,7 @@
         }
 
         @media print {
-            .print-btn, .btn-container, .action-box, .presentation-container { display: none; }
+            .print-btn, .btn-container, .action-box, .video-container { display: none; }
             .page { margin: 0; box-shadow: none; border: none; width: 100%; }
             body { background: white; }
         }
@@ -145,7 +149,7 @@
         <div class="contact-bar">
             <div>
                 <strong>Add:</strong> S/O Hari Ram, Sabalgarh-Mundawar, Khairthal-Tijara(Raj.) - 301404<br>
-                <a href="#" target="_blank" style="color: #FF8C00; font-size: 8pt; text-decoration: none;">📍 View on Google Maps</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sabalgarh-Mundawar+Khairthal-Tijara+301404" target="_blank" style="color: #FF8C00; font-size: 8pt; text-decoration: none;">📍 View on Google Maps</a>
             </div>
             <div style="text-align: right;">
                 <strong>Contact:</strong> 7073747448, 7300093754<br>
@@ -158,9 +162,12 @@
                 <h2>About Us</h2>
                 <p>Founded in 2018, M.S. Garathi Lifters provides premium aerial work platforms nationwide. We offer 24/7 technical support and a modern fleet for high-reach projects.</p>
                 
-                <h2>Fleet Showcase</h2>
-                <div class="presentation-container">
-                    <iframe src="Presentation1.pptx" title="Available Machinery Presentation"></iframe>
+                <h2>Available Machinery</h2>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline>
+                        <source src="Presentation1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
 
@@ -184,9 +191,9 @@
             </p>
 
             <div class="btn-container">
-                <a href="https://wa.me/917073747448?text=Hello" target="_blank" class="action-btn bg-whatsapp">💬 WhatsApp</a>
+                <a href="https://wa.me/917073747448?text=Hello,%20I%20am%20interested%20in%20renting%20machinery." target="_blank" class="action-btn bg-whatsapp">💬 WhatsApp</a>
                 <a href="tel:+917073747448" class="action-btn bg-call">📞 Call Us</a>
-                <a href="mailto:msgarathilifters7073@gmail.com" class="action-btn bg-email">✉️ Email</a>
+                <a href="mailto:msgarathilifters7073@gmail.com?subject=Inquiry" class="action-btn bg-email">✉️ Email</a>
             </div>
         </div>
 
